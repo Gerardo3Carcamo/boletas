@@ -1,0 +1,19 @@
+li, label {
+    cursor: pointer;
+}
+li, i, span {
+    font-weight: bold;
+    font-size: 0.99rem;
+    color: #FFF;
+}
+.topbar {
+    background-color: #0A0E2E;
+}
+::ng-deep .btn-personalizado .p-button-icon {
+    color: #FFF; 
+
+}
+::ng-deep .btn-personalizado .p-button-label{
+    color: #FFF; 
+    
+}

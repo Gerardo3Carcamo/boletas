@@ -1,8 +1,30 @@
 <div class="min-h-screen">
     <div class="relative w-full">
-        <div class="fixed top-0 left-0 surface-0 p-3 flex justify-content-between align-items-center shadow-1 w-full">
+        <div class="z-5 fixed top-0 left-0 p-3 flex justify-content-between align-items-center shadow-1 w-full topbar">
             <span class="font-bold">Boletas TTN</span>
-            <p-button icon="pi pi-sign-out" [text]="true" [rounded]="true"></p-button>
+            <div class="flex gap-2">
+                <ul class="flex gap-4" style="list-style: none; padding: 0; margin: 0;">
+                    <li>
+                        <div class="flex align-items-center gap-1">
+                            <i class="pi pi-book"></i>
+                            <label for="">Generar boleta</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex align-items-center gap-1">
+                            <i class="pi pi-car"></i>
+                            <label for="">Unidades</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex align-items-center gap-1">
+                            <i class="pi pi-user"></i>
+                            <label for="">Operadores</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p-button icon="pi pi-sign-out" [text]="true" label="Cerrar sesión" styleClass="btn-personalizado"></p-button>
         </div>
     </div>
 
@@ -10,8 +32,7 @@
         <router-outlet></router-outlet>
     </div>
 
-    <div class="fixed bottom-0 left-0 right-0 shadow-2 flex justify-content-center p-2"
-        style="background-color: var(--color-bg-body);">
+    <div class="fixed bottom-0 left-0 right-0 shadow-2 flex justify-content-center p-2 topbar">
         <span class="text-sm">Copyright © 2026 ARECH Solutions. All rights reserved.</span>
     </div>
 </div>

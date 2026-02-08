@@ -1,20 +1,20 @@
 import {
-  NG_VALUE_ACCESSOR,
-  NgControl
-} from "./chunk-67QSM4LL.js";
-import {
   AutoFocus,
   AutoFocusModule
-} from "./chunk-HJXI32LA.js";
+} from "./chunk-PQFXHI77.js";
+import {
+  NG_VALUE_ACCESSOR,
+  NgControl
+} from "./chunk-Z7LZVQFN.js";
 import {
   PrimeNGConfig
-} from "./chunk-UPZ7ALQM.js";
+} from "./chunk-GPOCQLXF.js";
 import {
   CommonModule,
   NgClass,
   NgIf,
   NgStyle
-} from "./chunk-FWMPEGZQ.js";
+} from "./chunk-ZQGI3ZYG.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -59,9 +59,9 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵviewQuery
-} from "./chunk-URHCTCSF.js";
+} from "./chunk-6DT2DWOU.js";
 
-// ../../../node_modules/primeng/fesm2022/primeng-radiobutton.mjs
+// node_modules/primeng/fesm2022/primeng-radiobutton.mjs
 var _c0 = ["input"];
 var _c1 = (a0, a1, a2, a3) => ({
   "p-radiobutton p-component": true,

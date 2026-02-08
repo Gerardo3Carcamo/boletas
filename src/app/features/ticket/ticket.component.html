@@ -1,25 +1,91 @@
-<div class="p-fluid p-formgrid grid" style="background-color: red;">
-    <div class="field col-3">
-        <img src="../../../assets/imgs/logo.avif" alt="" width="300">
+<div class="p-fluid p-formgrid grid">
+    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <div class="flex justify-content-center align-items-center h-full">
+            <img src="../../../assets/imgs/logo.avif" alt="" width="380">
+        </div>
     </div>
-    <div class="field col-6">
-        <div class="flex flex-column align-items-center justify-content-center">
+    <div class="field col-6 sm:col-12 md:col-12 lg:col-6 xl:col-6">
+        <div class="flex flex-column justify-content-center align-items-center h-full">
             <h3 class="my-0">TTN Transportes y Traslados del Norte</h3>
             <h4 class="my-0">Constancia de traslado</h4>
             <span>Correos: _____ Y oziel.molina&#64;transportesttn.com</span>
             <span>Teléfono: 8443800905</span>
-            <label>Pagina </label>
+            <span>Pagina </span>
             <div class="flex gap-2">
-                <div class="flex align-items-center">
-                    <p-radioButton></p-radioButton>
-                    <label></label>
-                </div>
-                <div class="flex align-items-center">
-                    <p-radioButton></p-radioButton>
-                    <label></label>
-                </div>
             </div>
         </div>
     </div>
-    <div class="field col-3"></div>
+    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <div class="flex flex-column justify-content-center align-items-center h-full">
+            <h3 class="my-1">Folio</h3>
+            <label style="font-size: 1.5rem; color: red;">No. EPMU1-GRCC</label>
+            <label>Fecha: {{today | date: 'dd/MM/yyyy'}}</label>
+        </div>
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <div class="flex flex-column align-items-center justify-content-center">
+            <label class="mb-2">Seleccione el tipo de traslado:</label>
+            <div class="flex gap-2">
+                <div class="flex align-items-center">
+                    <p-radioButton value="Entrada" (onClick)="test($event)" [(ngModel)]="tipo" />
+                    <label for="tipo1" class="ml-2">
+                        Entrada
+                    </label>
+                </div>
+
+                <div class="flex align-items-center">
+                    <p-radioButton value="Salida" (onClick)="test($event)" [(ngModel)]="tipo" />
+                    <label for="tipo2" class="ml-2">
+                        Salida
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <div class="flex flex-column align-items-center justify-content-center mb-1">
+            <label class="mb-2">Seleccione el turno:</label>
+            <div class="flex gap-2">
+                <div class="flex align-items-center">
+                    <p-radioButton value="Primero" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <label for="turno1" class="ml-2">
+                        Primero
+                    </label>
+                </div>
+
+                <div class="flex align-items-center">
+                    <p-radioButton value="Segundo" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <label for="turno2" class="ml-2">
+                        Segundo
+                    </label>
+                </div>
+                <div class="flex align-items-center">
+                    <p-radioButton value="Tercero" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <label for="turno3" class="ml-2">
+                        Tercero
+                    </label>
+                </div>
+                <div class="flex align-items-center">
+                    <p-radioButton value="Tiempo extra" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <label for="turno4" class="ml-2">
+                        Tiempo extra
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <label>Seleccione unidad:</label>
+        <p-dropdown></p-dropdown>
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+        <label>Seleccione operador:</label>
+        <p-dropdown></p-dropdown>
+    </div>
+    <div class="field col-12">
+        <label>Seleccione planta</label>
+        <p-dropdown></p-dropdown>
+    </div>
 </div>

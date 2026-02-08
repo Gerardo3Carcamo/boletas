@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-FWMPEGZQ.js";
+} from "./chunk-ZQGI3ZYG.js";
 import {
   Directive,
   ElementRef,
@@ -16,9 +16,9 @@ import {
   ɵɵdefineDirective,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-URHCTCSF.js";
+} from "./chunk-6DT2DWOU.js";
 
-// ../../../node_modules/primeng/fesm2022/primeng-dom.mjs
+// node_modules/primeng/fesm2022/primeng-dom.mjs
 var DomHandler = class _DomHandler {
   static zindex = 1e3;
   static calculatedScrollbarWidth = null;
@@ -693,8 +693,37 @@ var DomHandler = class _DomHandler {
                 [contenteditable]:not([tabIndex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector}`) : false;
   }
 };
+var ConnectedOverlayScrollHandler = class {
+  element;
+  listener;
+  scrollableParents;
+  constructor(element, listener = () => {
+  }) {
+    this.element = element;
+    this.listener = listener;
+  }
+  bindScrollListener() {
+    this.scrollableParents = DomHandler.getScrollableParents(this.element);
+    for (let i = 0; i < this.scrollableParents.length; i++) {
+      this.scrollableParents[i].addEventListener("scroll", this.listener);
+    }
+  }
+  unbindScrollListener() {
+    if (this.scrollableParents) {
+      for (let i = 0; i < this.scrollableParents.length; i++) {
+        this.scrollableParents[i].removeEventListener("scroll", this.listener);
+      }
+    }
+  }
+  destroy() {
+    this.unbindScrollListener();
+    this.element = null;
+    this.listener = null;
+    this.scrollableParents = null;
+  }
+};
 
-// ../../../node_modules/primeng/fesm2022/primeng-autofocus.mjs
+// node_modules/primeng/fesm2022/primeng-autofocus.mjs
 var AutoFocus = class _AutoFocus {
   /**
    * When present, it specifies that the component should automatically get focus on load.
@@ -790,7 +819,8 @@ var AutoFocusModule = class _AutoFocusModule {
 
 export {
   DomHandler,
+  ConnectedOverlayScrollHandler,
   AutoFocus,
   AutoFocusModule
 };
-//# sourceMappingURL=chunk-HJXI32LA.js.map
+//# sourceMappingURL=chunk-PQFXHI77.js.map
