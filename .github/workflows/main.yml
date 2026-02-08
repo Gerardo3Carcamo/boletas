@@ -1,0 +1,31 @@
+name: Deploy Boletas
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular (browser)
+        run: npm run build
+
+      - name: Deploy to server
+        run: |
+          rm -rf /var/www/boletas/dist
+          cp -r dist /var/www/boletas/
+          sudo systemctl reload nginx
