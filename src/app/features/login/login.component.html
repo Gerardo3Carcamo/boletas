@@ -1,0 +1,16 @@
+<div class="w-screen h-screen flex justify-content-center align-items-center">
+    <div class="flex justify-content-center flex-column py-2 px-3 card">
+        <h1 class="text-center text-3xl mb-4">Inicie sesión para continuar</h1>
+        <div class="flex flex-column gap-3">
+            <div class="flex flex-column gap-2">
+                <label>Ingrese su nombre de usuario</label>
+                <input type="text" [(ngModel)]="username" class="w-full" pInputText />
+            </div>
+            <div class="flex flex-column gap-2">
+                <label>Ingrese su contraseña</label>
+                <input type="password" [(ngModel)]="password" class="w-full" pInputText />
+            </div>
+            <button icon="pi pi-sign-in" pButton label="Iniciar sesión" (click)="login()" class="w-full mb-2"></button>
+        </div>
+    </div>
+</div>

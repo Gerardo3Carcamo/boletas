@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.scss';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+}
+
+:root {
+    --color-bg-body: #F8F9FA;
+    --color-bg-card: #FFFFFF;
+    --color-text-main: #212529;
+    --color-text-muted: #6C757D;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: var(--color-bg-card);
+    border: 1px solid #E0E0E0;
+    cursor: pointer;
+}

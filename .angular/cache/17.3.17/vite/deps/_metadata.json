@@ -1,0 +1,76 @@
+{
+  "hash": "c3928d87",
+  "configHash": "1177d972",
+  "lockfileHash": "1e780156",
+  "browserHash": "592d283a",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "4d198ce5",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "45e46ee6",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "eec01047",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "98cbf007",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "2a7fb606",
+      "needsInterop": false
+    },
+    "primeng/button": {
+      "src": "../../../../../node_modules/primeng/fesm2022/primeng-button.mjs",
+      "file": "primeng_button.js",
+      "fileHash": "4a2470a6",
+      "needsInterop": false
+    },
+    "primeng/inputtext": {
+      "src": "../../../../../node_modules/primeng/fesm2022/primeng-inputtext.mjs",
+      "file": "primeng_inputtext.js",
+      "fileHash": "4a4fbe6f",
+      "needsInterop": false
+    },
+    "primeng/radiobutton": {
+      "src": "../../../../../node_modules/primeng/fesm2022/primeng-radiobutton.mjs",
+      "file": "primeng_radiobutton.js",
+      "fileHash": "29c567d3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-CXFQVVT3": {
+      "file": "chunk-CXFQVVT3.js"
+    },
+    "chunk-67QSM4LL": {
+      "file": "chunk-67QSM4LL.js"
+    },
+    "chunk-HJXI32LA": {
+      "file": "chunk-HJXI32LA.js"
+    },
+    "chunk-UPZ7ALQM": {
+      "file": "chunk-UPZ7ALQM.js"
+    },
+    "chunk-FWMPEGZQ": {
+      "file": "chunk-FWMPEGZQ.js"
+    },
+    "chunk-URHCTCSF": {
+      "file": "chunk-URHCTCSF.js"
+    }
+  }
+}
