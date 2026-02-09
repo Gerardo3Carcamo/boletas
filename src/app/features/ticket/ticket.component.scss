@@ -5,3 +5,11 @@ span {
 label, span, h1, h2, h3, h4, h5, h6 {
     color: #FFF;
 }
+::ng-deep .btn-personalizado .p-button-icon {
+    color: #FFF; 
+    font-weight: bold;
+}
+::ng-deep .p-divider .p-divider-content {
+    background-color: #1A237E !important; /* El color de tu topbar/fondo */
+    color: #FFFFFF !important;            /* Color del texto */
+}

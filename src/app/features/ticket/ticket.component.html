@@ -27,14 +27,14 @@
             <label class="mb-2">Seleccione el tipo de traslado:</label>
             <div class="flex gap-2">
                 <div class="flex align-items-center">
-                    <p-radioButton value="Entrada" (onClick)="test($event)" [(ngModel)]="tipo" />
+                    <p-radioButton value="Entrada" [(ngModel)]="tipo" />
                     <label for="tipo1" class="ml-2">
                         Entrada
                     </label>
                 </div>
 
                 <div class="flex align-items-center">
-                    <p-radioButton value="Salida" (onClick)="test($event)" [(ngModel)]="tipo" />
+                    <p-radioButton value="Salida" [(ngModel)]="tipo" />
                     <label for="tipo2" class="ml-2">
                         Salida
                     </label>
@@ -48,26 +48,26 @@
             <label class="mb-2">Seleccione el turno:</label>
             <div class="flex gap-2">
                 <div class="flex align-items-center">
-                    <p-radioButton value="Primero" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <p-radioButton value="Primero" [(ngModel)]="turno" />
                     <label for="turno1" class="ml-2">
                         Primero
                     </label>
                 </div>
 
                 <div class="flex align-items-center">
-                    <p-radioButton value="Segundo" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <p-radioButton value="Segundo" [(ngModel)]="turno" />
                     <label for="turno2" class="ml-2">
                         Segundo
                     </label>
                 </div>
                 <div class="flex align-items-center">
-                    <p-radioButton value="Tercero" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <p-radioButton value="Tercero" [(ngModel)]="turno" />
                     <label for="turno3" class="ml-2">
                         Tercero
                     </label>
                 </div>
                 <div class="flex align-items-center">
-                    <p-radioButton value="Tiempo extra" (onClick)="test($event)" [(ngModel)]="turno" />
+                    <p-radioButton value="Tiempo extra" [(ngModel)]="turno" />
                     <label for="turno4" class="ml-2">
                         Tiempo extra
                     </label>
@@ -88,4 +88,63 @@
         <label>Seleccione planta</label>
         <p-dropdown></p-dropdown>
     </div>
+    <div class="field col-12 my-0">
+        <p-divider align="center" [style]="{'background-color': '#1A237E !important'}">Personal</p-divider>
+    </div>
+    <div class="field col-12 my-0">
+        <div class="flex justify-content-end">
+            <p-button 
+                icon="pi pi-plus" 
+                [text]="true" size="small" 
+                [rounded]="true" 
+                styleClass="btn-personalizado" 
+                (click)="addPersonal()"/>
+        </div>
+    </div>
+    @for (p of personal; track $index) {
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-2 xl:col-2 my-0">
+            <label>Nomina:</label>
+            <input type="text" pInputText [(ngModel)]="p.nomina">
+        </div>
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 my-0">
+            <label>Nombre:</label>
+            <input type="text" pInputText [(ngModel)]="p.nombre">
+        </div>
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 my-0">
+            <label>Direccion:</label>
+            <div class="flex gap-2 align-items-center w-full">
+                <input type="text" pInputText [(ngModel)]="p.direccion">
+                <p-button icon="pi pi-trash" size="small" severity="danger" (click)="removePersonal(p.nomina ?? '')"></p-button>
+            </div>
+        </div>
+        @if (personal.length > 1 && personal[$index + 1] != null) {
+            <div class="field col-12 my-0">
+                <p-divider></p-divider>
+            </div>
+        }
+    }
+    <div class="field col-12 my-0">
+        <p-divider align="center" [style]="{'background-color': '#1A237E !important'}">Solicitantes</p-divider>
+    </div>
+    <div class="field col-12 my-0">
+        <div class="flex justify-content-end">
+            <p-button 
+                icon="pi pi-plus" 
+                [text]="true" 
+                size="small" 
+                [rounded]="true" 
+                styleClass="btn-personalizado" 
+                (click)="addSolicitante()"/>
+        </div>
+    </div>
+    @for (s of solicitantes; track $index) {
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 my-0">
+            <label>Nombre:</label>
+            <input type="text" pInputText [(ngModel)]="s.nombre">
+        </div>
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 my-0">
+            <label>Departamento:</label>
+            <input type="text" pInputText [(ngModel)]="s.departamento">
+        </div>
+    }
 </div>

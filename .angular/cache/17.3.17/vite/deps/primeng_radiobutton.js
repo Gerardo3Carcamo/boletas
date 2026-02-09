@@ -3,12 +3,12 @@ import {
   AutoFocusModule
 } from "./chunk-PQFXHI77.js";
 import {
+  PrimeNGConfig
+} from "./chunk-GPOCQLXF.js";
+import {
   NG_VALUE_ACCESSOR,
   NgControl
 } from "./chunk-Z7LZVQFN.js";
-import {
-  PrimeNGConfig
-} from "./chunk-GPOCQLXF.js";
 import {
   CommonModule,
   NgClass,
