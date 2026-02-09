@@ -1,10 +1,10 @@
-<div class="p-fluid p-formgrid grid">
-    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+<div class="p-fluid p-formgrid grid pb-0 my-0">
+    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <div class="flex justify-content-center align-items-center h-full">
             <img src="../../../assets/imgs/logo.avif" alt="" width="380">
         </div>
     </div>
-    <div class="field col-6 sm:col-12 md:col-12 lg:col-6 xl:col-6">
+    <div class="field col-6 sm:col-12 md:col-12 lg:col-6 xl:col-6 py-0">
         <div class="flex flex-column justify-content-center align-items-center h-full">
             <h3 class="my-0">TTN Transportes y Traslados del Norte</h3>
             <h4 class="my-0">Constancia de traslado</h4>
@@ -15,14 +15,14 @@
             </div>
         </div>
     </div>
-    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+    <div class="field col-3 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <div class="flex flex-column justify-content-center align-items-center h-full">
             <h3 class="my-1">Folio</h3>
             <label style="font-size: 1.5rem; color: red;">No. EPMU1-GRCC</label>
             <label>Fecha: {{today | date: 'dd/MM/yyyy'}}</label>
         </div>
     </div>
-    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <div class="flex flex-column align-items-center justify-content-center">
             <label class="mb-2">Seleccione el tipo de traslado:</label>
             <div class="flex gap-2">
@@ -43,7 +43,7 @@
         </div>
 
     </div>
-    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <div class="flex flex-column align-items-center justify-content-center mb-1">
             <label class="mb-2">Seleccione el turno:</label>
             <div class="flex gap-2">
@@ -76,22 +76,30 @@
         </div>
 
     </div>
-    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <label>Seleccione unidad:</label>
         <p-dropdown></p-dropdown>
     </div>
-    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3">
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
         <label>Seleccione operador:</label>
+        <p-dropdown [options]="users" optionLabel="usuario" optionValue="id"></p-dropdown>
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 py-0">
+        <label>Seleccione planta:</label>
         <p-dropdown></p-dropdown>
     </div>
-    <div class="field col-12">
-        <label>Seleccione planta</label>
-        <p-dropdown></p-dropdown>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
+        <label>Seleccione hora de entrada:</label>
+        <p-calendar [showTime]="true" dateFormat="dd/mm/yy" [timeOnly]="true" [readonlyInput]="true"/>
     </div>
-    <div class="field col-12 my-0">
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-3 xl:col-3 py-0">
+        <label>Seleccione hora de salida:</label>
+        <p-calendar [showTime]="true" dateFormat="dd/mm/yy" [timeOnly]="true" [readonlyInput]="true"/>
+    </div>
+    <div class="field col-12 pb-0 my-0">
         <p-divider align="center" [style]="{'background-color': '#1A237E !important'}">Personal</p-divider>
     </div>
-    <div class="field col-12 my-0">
+    <div class="field col-12 pb-0 my-0">
         <div class="flex justify-content-end">
             <p-button 
                 icon="pi pi-plus" 
@@ -102,15 +110,15 @@
         </div>
     </div>
     @for (p of personal; track $index) {
-        <div class="field col-12 sm:col-12 md:col-12 lg:col-2 xl:col-2 my-0">
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-2 xl:col-2 pb-0 my-0">
             <label>Nomina:</label>
             <input type="text" pInputText [(ngModel)]="p.nomina">
         </div>
-        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 my-0">
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 pb-0 my-0">
             <label>Nombre:</label>
             <input type="text" pInputText [(ngModel)]="p.nombre">
         </div>
-        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 my-0">
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-5 xl:col-5 pb-0 my-0">
             <label>Direccion:</label>
             <div class="flex gap-2 align-items-center w-full">
                 <input type="text" pInputText [(ngModel)]="p.direccion">
@@ -118,15 +126,15 @@
             </div>
         </div>
         @if (personal.length > 1 && personal[$index + 1] != null) {
-            <div class="field col-12 my-0">
+            <div class="field col-12 pb-0 my-0">
                 <p-divider></p-divider>
             </div>
         }
     }
-    <div class="field col-12 my-0">
+    <div class="field col-12 pb-0 my-0">
         <p-divider align="center" [style]="{'background-color': '#1A237E !important'}">Solicitantes</p-divider>
     </div>
-    <div class="field col-12 my-0">
+    <div class="field col-12 pb-0 my-0">
         <div class="flex justify-content-end">
             <p-button 
                 icon="pi pi-plus" 
@@ -138,13 +146,35 @@
         </div>
     </div>
     @for (s of solicitantes; track $index) {
-        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 my-0">
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 pb-0 my-0">
             <label>Nombre:</label>
             <input type="text" pInputText [(ngModel)]="s.nombre">
         </div>
-        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 my-0">
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 pb-0 my-0">
             <label>Departamento:</label>
-            <input type="text" pInputText [(ngModel)]="s.departamento">
+            <div class="flex gap-2 align-items-center w-full">
+                <input type="text" pInputText [(ngModel)]="s.departamento">
+                <p-button icon="pi pi-trash" size="small" severity="danger" (click)="removeSolicitante(s.nombre ?? '')"></p-button>
+            </div>
         </div>
+        @if (solicitantes.length > 1 && solicitantes[$index + 1] != null) {
+            <div class="field col-12 pb-0 my-0">
+                <p-divider></p-divider>
+            </div>
+        }
     }
+    <div class="field col-12 pb-0 my-0">
+        <p-divider></p-divider>
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 pb-1 mb-0">
+        <label>Nombre del supervisor:</label>
+        <input type="text" pInputText>
+    </div>
+    <div class="field col-12 sm:col-12 md:col-12 lg:col-6 xl:col-6 pb-1 mb-1">
+        <label>Nombre del supervisor de planta:</label>
+        <input type="text" pInputText>
+    </div>
+    <div class="field col-12 mb-0 pb-0">
+        <p-button label="Guardar" icon="pi pi-save" severity="success"></p-button>
+    </div>
 </div>

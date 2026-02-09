@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-ZQGI3ZYG.js";
+} from "./chunk-T76FZRMF.js";
 import {
   Directive,
   ElementRef,
@@ -16,7 +16,7 @@ import {
   ɵɵdefineDirective,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-6DT2DWOU.js";
+} from "./chunk-6JJ7KVRE.js";
 
 // node_modules/primeng/fesm2022/primeng-dom.mjs
 var DomHandler = class _DomHandler {
@@ -823,4 +823,4 @@ export {
   AutoFocus,
   AutoFocusModule
 };
-//# sourceMappingURL=chunk-PQFXHI77.js.map
+//# sourceMappingURL=chunk-PE3AJHQD.js.map

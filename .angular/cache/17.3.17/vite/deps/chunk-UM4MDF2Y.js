@@ -1,15 +1,15 @@
 import {
   DomHandler
-} from "./chunk-PQFXHI77.js";
+} from "./chunk-PE3AJHQD.js";
 import {
   ObjectUtils,
   PrimeNGConfig,
   UniqueComponentId
-} from "./chunk-GPOCQLXF.js";
+} from "./chunk-FNC2MRYB.js";
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-ZQGI3ZYG.js";
+} from "./chunk-T76FZRMF.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -45,7 +45,7 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef,
   ɵɵproperty
-} from "./chunk-6DT2DWOU.js";
+} from "./chunk-6JJ7KVRE.js";
 
 // node_modules/primeng/fesm2022/primeng-baseicon.mjs
 var _c0 = ["*"];
@@ -362,4 +362,4 @@ export {
   Ripple,
   RippleModule
 };
-//# sourceMappingURL=chunk-7HNMODYS.js.map
+//# sourceMappingURL=chunk-UM4MDF2Y.js.map

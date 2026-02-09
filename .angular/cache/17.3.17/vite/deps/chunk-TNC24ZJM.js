@@ -1,6 +1,6 @@
 import {
   DOCUMENT
-} from "./chunk-ZQGI3ZYG.js";
+} from "./chunk-T76FZRMF.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -12,7 +12,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-6DT2DWOU.js";
+} from "./chunk-6JJ7KVRE.js";
 
 // node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationMetadataType;
@@ -59,6 +59,14 @@ function style(tokens) {
     type: AnimationMetadataType.Style,
     styles: tokens,
     offset: null
+  };
+}
+function state(name, styles, options) {
+  return {
+    type: AnimationMetadataType.State,
+    name,
+    styles,
+    options
   };
 }
 function transition(stateChangeExpr, steps, options = null) {
@@ -476,6 +484,7 @@ export {
   animate,
   sequence,
   style,
+  state,
   transition,
   animation,
   useAnimation,
@@ -492,4 +501,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-S5WVG5IN.js.map
+//# sourceMappingURL=chunk-TNC24ZJM.js.map
