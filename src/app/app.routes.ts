@@ -3,6 +3,7 @@ import { LoginComponent } from './features/login/login.component';
 import { LayoutComponent } from './features/layout/layout.component';
 import { TicketComponent } from './features/ticket/ticket.component';
 import { UnidadesComponent } from './features/unidades/unidades.component';
+import { OperadoresComponent } from './features/operadores/operadores.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,6 +19,10 @@ export const routes: Routes = [
             {
                 path: 'unidades',
                 component: UnidadesComponent
+            },
+            {
+                path: 'operadores',
+                component: OperadoresComponent
             }
         ]
     }

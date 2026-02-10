@@ -1,0 +1,24 @@
+<div 
+    class="p-fluid p-formgrid grid relative">
+    <div class="right-0 bottom-0 fixed" style="margin-right: .75rem; margin-bottom: 2.5rem;">
+        <p-button 
+            [rounded]="true" 
+            icon="pi pi-plus" 
+            severity="success"/>
+    </div>
+    @for (u of [{},{},{},{},{},{}]; track $index) {
+        <div class="field col-12 sm:col-12 md:col-12 lg:col-2 xl:col-2">
+            <div class="card p-3">
+                <div class="flex flex-column align-items-center gap-0 w-full">
+                    <p-avatar shape="circle" size="xlarge" icon="pi pi-user"></p-avatar>
+                    <h3 class="mb-0 mt-2">Gerardo Chavez</h3>
+                    <h4 class="my-0">Administrador</h4>
+                    <label class="mt-2 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm">Nombre de usuario: CHAVEZG</label>
+                    <div class="flex justify-content-center w-full mt-2">
+                        <p-button [rounded]="true" [text]="true" label="Editar" styleClass="w-full"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

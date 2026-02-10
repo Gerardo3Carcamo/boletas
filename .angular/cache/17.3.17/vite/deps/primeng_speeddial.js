@@ -2,16 +2,16 @@ import {
   RouterLink,
   RouterModule
 } from "./chunk-5MGUF5ZW.js";
+import {
+  Tooltip,
+  TooltipModule
+} from "./chunk-NXB5JTTQ.js";
 import "./chunk-Y6VDGAZN.js";
 import "./chunk-2IRRX5HF.js";
 import {
   ButtonDirective,
   ButtonModule
 } from "./chunk-GQ7GWZIR.js";
-import {
-  Tooltip,
-  TooltipModule
-} from "./chunk-NXB5JTTQ.js";
 import {
   Ripple,
   RippleModule
