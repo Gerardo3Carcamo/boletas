@@ -1,0 +1,44 @@
+<div class="p-fluid p-formgrid grid">
+    <div class="field col-12">
+        <label>Seleccione marca</label>
+        <p-dropdown [(ngModel)]="marcaSeleccionada"
+            [options]="marcas"
+            optionLabel="nombre"
+            optionValue="id">
+            <ng-template pTemplate="selectedItem">
+            @if (marcaSeleccionada !== 0) {
+                <div class="flex align-items-center gap-2">
+                <img [src]="'assets/imgs/' + FindName().toLowerCase() + '.png'" width="32">
+                <div>{{ FindName() }}</div>
+                </div>
+            }
+            </ng-template>
+            <ng-template let-marca pTemplate="item">
+                <div class="flex align-items-center gap-2">
+                    <img [src]="'assets/imgs/' + marca.nombre.toLowerCase() + '.png'" width="32" alt="{{ marca.nombre }} logo">
+                    <div>{{ marca.nombre }}</div>
+                </div>
+            </ng-template>
+        </p-dropdown>
+    </div>
+    <div class="field col-12">
+        <label>Ingrese modelo</label>
+        <input type="text" pInputText [(ngModel)]="unidad.modelo">
+    </div>
+    <div class="field col-12">
+        <label>Ingrese año</label>
+        <input type="text" pInputText [(ngModel)]="unidad.anio">
+    </div>
+    <div class="field col-12">
+        <label>Ingrese número de unidad</label>
+        <input type="text" pInputText [(ngModel)]="unidad.numeroUnidad">
+    </div>
+    <div class="field col-12">
+        <p-button 
+            label="Agregar unidad" 
+            icon="pi pi-save" 
+            severity="success"
+            [disabled]="!ValidarCampos()"
+            (onClick)="SaveUnidad()"/>
+    </div>
+</div>

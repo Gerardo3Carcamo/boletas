@@ -5,10 +5,11 @@ import {
 import {
   AutoFocus,
   AutoFocusModule
-} from "./chunk-PE3AJHQD.js";
+} from "./chunk-LCST64RR.js";
+import "./chunk-JZQAVOZS.js";
 import {
   PrimeNGConfig
-} from "./chunk-FNC2MRYB.js";
+} from "./chunk-MW6N3XTI.js";
 import {
   CommonModule,
   NgClass,

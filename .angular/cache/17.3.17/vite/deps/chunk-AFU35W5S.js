@@ -1,33 +1,29 @@
 import {
-  DomHandler
-} from "./chunk-PE3AJHQD.js";
+  BaseIcon
+} from "./chunk-WVUL5KXD.js";
 import {
-  ObjectUtils,
+  DomHandler
+} from "./chunk-JZQAVOZS.js";
+import {
   PrimeNGConfig,
   UniqueComponentId
-} from "./chunk-FNC2MRYB.js";
+} from "./chunk-MW6N3XTI.js";
 import {
   DOCUMENT,
   isPlatformBrowser
 } from "./chunk-T76FZRMF.js";
 import {
-  ChangeDetectionStrategy,
   Component,
   Directive,
   ElementRef,
   Inject,
-  Input,
-  InputFlags,
   NgModule,
   NgZone,
   Optional,
   PLATFORM_ID,
   Renderer2,
-  ViewEncapsulation$1,
-  booleanAttribute,
   setClassMetadata,
   ɵɵInheritDefinitionFeature,
-  ɵɵInputTransformsFeature,
   ɵɵStandaloneFeature,
   ɵɵadvance,
   ɵɵattribute,
@@ -42,86 +38,8 @@ import {
   ɵɵelementStart,
   ɵɵgetInheritedFactory,
   ɵɵnamespaceSVG,
-  ɵɵprojection,
-  ɵɵprojectionDef,
   ɵɵproperty
 } from "./chunk-6JJ7KVRE.js";
-
-// node_modules/primeng/fesm2022/primeng-baseicon.mjs
-var _c0 = ["*"];
-var BaseIcon = class _BaseIcon {
-  label;
-  spin = false;
-  styleClass;
-  role;
-  ariaLabel;
-  ariaHidden;
-  ngOnInit() {
-    this.getAttributes();
-  }
-  getAttributes() {
-    const isLabelEmpty = ObjectUtils.isEmpty(this.label);
-    this.role = !isLabelEmpty ? "img" : void 0;
-    this.ariaLabel = !isLabelEmpty ? this.label : void 0;
-    this.ariaHidden = isLabelEmpty;
-  }
-  getClassNames() {
-    return `p-icon ${this.styleClass ? this.styleClass + " " : ""}${this.spin ? "p-icon-spin" : ""}`;
-  }
-  static ɵfac = function BaseIcon_Factory(t) {
-    return new (t || _BaseIcon)();
-  };
-  static ɵcmp = ɵɵdefineComponent({
-    type: _BaseIcon,
-    selectors: [["ng-component"]],
-    hostAttrs: [1, "p-element", "p-icon-wrapper"],
-    inputs: {
-      label: "label",
-      spin: [InputFlags.HasDecoratorInputTransform, "spin", "spin", booleanAttribute],
-      styleClass: "styleClass"
-    },
-    standalone: true,
-    features: [ɵɵInputTransformsFeature, ɵɵStandaloneFeature],
-    ngContentSelectors: _c0,
-    decls: 1,
-    vars: 0,
-    template: function BaseIcon_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BaseIcon, [{
-    type: Component,
-    args: [{
-      template: ` <ng-content></ng-content> `,
-      standalone: true,
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      encapsulation: ViewEncapsulation$1.None,
-      host: {
-        class: "p-element p-icon-wrapper"
-      }
-    }]
-  }], null, {
-    label: [{
-      type: Input
-    }],
-    spin: [{
-      type: Input,
-      args: [{
-        transform: booleanAttribute
-      }]
-    }],
-    styleClass: [{
-      type: Input
-    }]
-  });
-})();
 
 // node_modules/primeng/fesm2022/primeng-icons-spinner.mjs
 var SpinnerIcon = class _SpinnerIcon extends BaseIcon {
@@ -357,9 +275,8 @@ var RippleModule = class _RippleModule {
 })();
 
 export {
-  BaseIcon,
   SpinnerIcon,
   Ripple,
   RippleModule
 };
-//# sourceMappingURL=chunk-UM4MDF2Y.js.map
+//# sourceMappingURL=chunk-AFU35W5S.js.map

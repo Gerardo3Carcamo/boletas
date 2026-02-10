@@ -3,7 +3,7 @@ import {
 } from "./chunk-DJAXFXFY.js";
 import {
   PrimeNGConfig
-} from "./chunk-FNC2MRYB.js";
+} from "./chunk-MW6N3XTI.js";
 import {
   CommonModule
 } from "./chunk-T76FZRMF.js";
